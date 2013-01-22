@@ -24,7 +24,7 @@ public class Main  {
 	public static final String AUCTION_ID_FORMAT = ITEM_ID_AS_LOGIN + "@%s/" + AUCTION_RESOURCE ;
 	
 	private MainWindow ui;
-	public final static String MAIN_WINDOW_NAME = "Main Window Name";
+	public final static String MAIN_WINDOW_NAME = "Auction Sniper Main";
 	public static final String SNIPER_STATUS_NAME = "sniper status";
 	public static final String JOIN_COMMAND_FORMAT = "JOIN";
 	public static final String BID_COMMAND_FORMAT = "BID";
@@ -90,10 +90,6 @@ public class Main  {
 		public void sniperLost() {
 			showStatus(MainWindow.STATUS_LOST);
 		}
-		@Override
-		public void sniperBidding() {
-			showStatus(MainWindow.STATUS_BIDDING);
-		}
 		
 		public void sniperWinning() {
 			showStatus(MainWindow.STATUS_WINNING);
@@ -108,6 +104,14 @@ public class Main  {
 		@Override
 		public void sniperWon() {
 			showStatus(MainWindow.STATUS_WON);
+		}
+		@Override
+		public void sniperBidding(final SniperState state) {
+			SwingUtilities.invokeLater(new Runnable()  {
+				public void run() {
+					ui.sniperStatusChanged(state, MainWindow.STATUS_BIDDING);
+				}
+			});
 		}
 	}
 	

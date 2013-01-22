@@ -11,5 +11,6 @@
 	<classpathentry kind="lib" path="C:/Program Files/Java/windowlicker-core-r268.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Java/windowlicker-swing-r268.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Java/smack_3_2_2/smackx.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/commons-lang3-3.1/commons-lang3-3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,4 +1,4 @@
-package test.auctionsniper;
+package fake.auctionsniper;
 import org.hamcrest.Matcher;
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.ChatManagerListener;
